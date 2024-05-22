@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <style>
+      .bg-container {
+        background-image: url("./tridai.avif");
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .text {
+        position: absolute;
+        left: 15%;
+        top: 33%;
+        height: 25%;
+        width: 35%;
+        /* border: 2px solid red; */
+      }
+      .about-page {
+        height: 100vh;
+        width: 100vw;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: space-around;
+        background-color: #e6e6e6;
+      }
+      .container {
+        height: 100%;
+        width: 55%;
+        /* border: 2px solid green; */
+      }
+      .container2 {
+        height: 100%;
+        width: 45%;
+        /* border: 2px solid green; */
+      }
+      .img-container {
+        margin-left: 20%;
+        margin-top: 15%;
+        height: 60%;
+        width: 75%;
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+      }
+
+      .explore-sec {
+        height: 100vh;
+        width: 100vw;
+        /* border: 2px solid red; */
+        background-color: white;
+      }
+      .info {
+        width: 100%;
+        height: 40%;
+        /* border: 2px solid green; */
+      }
+      section {
+        margin-top: 10%;
+        margin-left: 5%;
+      }
+      .info-cards {
+        width: 100%;
+        height: 55%;
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: space-around;
+        margin-top: -7%;
+      }
+      .card {
+        height: 260px;
+        width: 300px;
+        margin-top: 25px;
+        /* border: 2px solid black; */
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px grey;
+        padding: 10px;
+      }
+
+      .projects-sec {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e6e6e6;
+        /* border: 2px solid red; */
+      }
+      .projects-top-sec {
+        height: 30%;
+        width: 50vw;
+        border: 2px solid transparent;
+      }
+
+      .projects-bottom-sec {
+        height: 70%;
+        width: 100vw;
+        /* border: 2px solid blue; */
+        /* display: flex; */
+      }
+
+      .img-sec {
+        margin-top: -5%;
+        height: 90%;
+        width: 50%;
+        /* border: 2px solid green; */
+        position: relative;
+        margin-right: 10%;
+        float: right;
+        background-image: url("./tridai.avif");
+        background-size: cover;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+      .form {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: -25%;
+        height: 65%;
+        width: 50%;
+        /* border: 2px solid greenyellow; */
+        background-color: white;
+        /* border: 2px solid black; */
+        box-shadow: 0 0 0 2px grey;
+        border-bottom-right-radius: 25px;
+        padding: 10px;
+      }
+
+      .information-sec {
+        padding-bottom: 10px;
+        height: 100vh;
+        width: 100vw;
+        /* border: 2px solid orange; */
+        background-color: white;
+      }
+      .info-top-sec {
+        margin-top: 10%;
+        height: 25%;
+        width: 50vw;
+        border: 2px solid transparent;
+      }
+      .info-cards-sec {
+        margin-top: 7%;
+        width: 100%;
+        height: 55%;
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: space-around;
+      }
+      .fotter-page {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e6e6e6;
+        background-size: cover;
+        position: relative;
+        border: 2px solid transparent;
+      }
+      .fotter-sec {
+        height: 40%;
+        width: 100vw;
+        /* border: 2px solid blueviolet; */
+        display: flex;
+        justify-content: space-evenly;
+        background-color: grey;
+
+        bottom: 0%;
+        position: absolute;
+      }
+      .fott-info {
+        height: 100%;
+        width: 20%;
+        /* border: 2px solid royalblue; */
+        text-align: center;
+        background-color: grey;
+        color: white;
+        font-weight: bolder;
+      }
+      .logo {
+        margin-left: 8%;
+        height: 25%;
+        width: 180px;
+      }
+      .nav-bar {
+        float: right;
+        height: 50px;
+        width: 70%;
+        margin-right: 10%;
+        margin-top: -95px;
+        display: flex;
+        justify-content: space-between;
+        color: grey;
+        font-weight: bolder;
+      }
+      .fa-chevron-down {
+        font-size: 0.7em;
+      }
+      .menu-div {
+        width: 15px;
+        height: 3px;
+        background-color: red;
+        margin: 4px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-container">
+      <div class="logo">
+        <img
+          src="https://media.licdn.com/dms/image/D4D0BAQECEvTz2vazjg/company-logo_200_200/0/1710532990906/tridasarealty_logo?e=2147483647&v=beta&t=1gHtS867ZdWj1NTo_PBhatLnlLrMoIk8tqLglWqWfP4"
+          height="100%"
+          width="100%"
+        />
+      </div>
+
+      <div class="nav-bar">
+        <i class="fa-solid fa-phone" style="color: red"></i>
+        <pre>+91 9876543210</pre>
+        <p style="color: #342e69; font-weight: bolder; margin-top: 15px">
+          Home
+        </p>
+
+        <p style="margin-top: 15px">
+          About<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Why Tridasa<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Project<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          work With us<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Information Hub<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Our client Kutumbam<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Gallery<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <p style="margin-top: 15px">
+          Contact<i class="fa-solid fa-chevron-down"></i>
+        </p>
+        <div style="display: inline-block; margin-top: 15px">
+          <div class="menu-div"></div>
+          <div class="menu-div"></div>
+          <div class="menu-div"></div>
+        </div>
+      </div>
+      <div></div>
+      <!--first page-->
+
+      <div class="text">
+        <h1 style="font-weight: 700">
+          Crafting Properties that <br />you'll
+          <span style="color: #342e69">Value.</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="about-page">
+      <!--second page!-->
+
+      <div class="container,container-fluid">
+        <div class="img-container">
+          <img
+            src="https://img.freepik.com/premium-vector/living-room-graphic-black-white-home-interior-sketch-illustration-vector_506744-289.jpg?w=1060"
+            height="100%"
+            width="100%"
+            style="
+              border-top-left-radius: 35px;
+              border-bottom-right-radius: 35px;
+              box-shadow: 2px 2px 2px black;
+            "
+          />
+        </div>
+      </div>
+      <div class="container2">
+        <div style="margin-top: 20%">
+          <div style="display: inline-block">
+            <h1 style="color: #342e69; font-weight: bolder">About Tridasa</h1>
+            <div
+              style="
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                margin: 4px 0;
+              "
+            ></div>
+          </div>
+          <h2 style="font-weight: 900">
+            Lighting Up Living,Not Just <br />Lifestyles
+          </h2>
+          <button
+            style="
+              color: white;
+              background-color: crimson;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              height: 30px;
+              width: 100px;
+              border: transparent;
+            "
+          >
+            explore
+            <span
+              style="
+                border: 2px solid white;
+                border-radius: 50%;
+                font-weight: bold;
+              "
+              >+</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="explore-sec">
+      <!-- third page-->
+      <div class="info">
+        <section>
+          <div style="display: inline-block">
+            <h1 style="color: #342e69; font-weight: bolder">Why Tridasa</h1>
+            <div
+              style="
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                margin: 4px 0;
+              "
+            ></div>
+          </div>
+
+          <h2 style="font-weight: 900">
+            Crafting Properties that you'll value.
+          </h2>
+          <button
+            style="
+              color: white;
+              background-color: crimson;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              height: 30px;
+              width: 100px;
+              border: transparent;
+            "
+          >
+            explore
+            <span
+              style="
+                border: 2px solid white;
+                border-radius: 50%;
+                font-weight: bold;
+                text-align: center;
+              "
+              >+</span
+            >
+          </button>
+        </section>
+      </div>
+
+      <div class="info-cards">
+        <div class="card">
+          <img
+            src="./feedback_7394070.png"
+            height="80px"
+            width="100px"
+            style="padding-bottom: 10px"
+          />
+          <h4 style="color: #342e69">At the Helm(Leadership Team)</h4>
+          <p style="font-weight: 300; font-family: sans-serif">
+            Construction Company <br />is a Reputable Firm
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="./target_5803857.png"
+            height="80px"
+            width="100px"
+            style="padding-bottom: 10px"
+          />
+          <h4 style="color: #342e69">Customer Centric</h4>
+          <p style="font-weight: 300; font-family: sans-serif">
+            Construction Company <br />is a Reputable Firm
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="./Premium Vector _ Business values vector round concept.jpeg"
+            alt="Trust Logo"
+            height="80px"
+            width="100px"
+            style="border-radius: 20px"
+          />
+
+          <h4 style="color: #342e69">Values that Differentiate</h4>
+          <p style="font-weight: 300; font-family: sans-serif">
+            Construction Company<br />
+            is a Reputable Firm
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://s3.us-east-2.amazonaws.com/files.fisher.osu.edu/leadreadtoday/public/styles/image_src/public/2022-01/trust-word-concepts-banner-vector-id1175873327.jpg?VersionId=7l1EWRFHkOc4YxF3nqfEjQ5c9g9lWNde"
+            alt="Trust Logo"
+            height="80px"
+            width="100px"
+            style="border-radius: 20px"
+          />
+
+          <h4 style="color: #342e69; font-weight: bolder">Trust</h4>
+
+          <p style="font-weight: 300; font-family: sans-serif">
+            Construction Company <br />is a Reputable Firm
+          </p>
+        </div>
+      </div>
+
+      <pre
+        style="margin-left: 30px"
+      ><i class="fa-solid fa-arrow-left fa-1x"></i>       <i class="fa-solid fa-arrow-right fa-1x"></i></pre>
+    </div>
+
+    <div class="projects-sec">
+      <!-- fourth page-->
+
+      <div class="projects-top-sec">
+        <section style="margin-top: 50px; margin-left: 100px">
+          <div style="display: inline-block">
+            <h1 style="color: #342e69; font-weight: bolder">Projects</h1>
+            <div
+              style="
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                margin: 4px 0;
+              "
+            ></div>
+          </div>
+
+          <h2 style="font-weight: 900">Arise to a new down in living.</h2>
+        </section>
+      </div>
+
+      <div class="projects-bottom-sec">
+        <div class="img-sec">
+          <div class="form">
+            <h1
+              style="
+                color: #342e69;
+                font-weight: bolder;
+                font-family: sans-serif;
+              "
+            >
+              Tridasa Rise
+            </h1>
+            <p style="font-weight: bold">Arise to a new dawn in living</p>
+            <hr style="color: red" />
+            <h4>3 ,& 4 BHK | 1000 Units | 2500sft<sup>+</sup></h4>
+            <hr style="color: red" />
+            <p style="font-weight: bolder">Nallgandla</p>
+            <hr style="color: red" />
+            <button
+              style="
+                color: white;
+                background-color: crimson;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                height: 35px;
+                width: 100px;
+                border: transparent;
+              "
+            >
+              EXPLORE
+              <span
+                style="
+                  border: 2px solid white;
+                  border-radius: 35%;
+                  font-weight: bold;
+                "
+                >+</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="information-sec">
+      <!-- fifth page-->
+      <div class="info-top-sec">
+        <section>
+          <div style="display: inline-block">
+            <h1 style="color: #342e69; font-weight: bolder">Information hub</h1>
+            <div
+              style="
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                margin: 4px 0;
+              "
+            ></div>
+          </div>
+
+          <h2 style="font-weight: 900">All things real-estate</h2>
+        </section>
+      </div>
+
+      <div class="info-cards-sec">
+        <div class="card" style="background-color: #e6e6e6"></div>
+
+        <div class="card" style="text-align: flex-start">
+          <h4 style="color: #342e69">
+            Tridasa |
+            <span style="color: grey; font-size: small">15-Mar-2023</span>
+          </h4>
+          <p style="font-weight: bold; font-family: sans-serif">
+            Hyderabad urban development <br />authority is a key driver in
+            the<br />
+            development of the city
+          </p>
+          <p>
+            Tridasa Construction Company is a reputable<br />firm specializing
+            in construction
+          </p>
+          <button
+            style="
+              color: white;
+              background-color: crimson;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              height: 30px;
+              width: 100px;
+              border: transparent;
+            "
+          >
+            explore
+            <span
+              style="
+                border: 2px solid white;
+                border-radius: 35%;
+                font-weight: bold;
+              "
+              >+</span
+            >
+          </button>
+        </div>
+
+        <div class="card" style="background-color: #e6e6e6"></div>
+
+        <div class="card" style="text-align: flex-start">
+          <h4 style="color: #342e69">
+            Tridasa |
+            <span style="color: grey; font-size: small">15-Mar-2023</span>
+          </h4>
+          <p style="font-weight: bold; font-family: sans-serif">
+            Hyderabad urban development <br />authority is a key driver in
+            the<br />
+            development of the city
+          </p>
+          <p>
+            Tridasa Construction Company is a reputable<br />firm specializing
+            in construction
+          </p>
+          <button
+            style="
+              color: white;
+              background-color: crimson;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              height: 30px;
+              width: 100px;
+              border: transparent;
+            "
+          >
+            explore
+            <span
+              style="
+                border: 2px solid white;
+                border-radius: 35%;
+                font-weight: bold;
+              "
+              >+</span
+            >
+          </button>
+        </div>
+      </div>
+      <pre
+        style="margin-left: 30px"
+      >     <i class="fa-solid fa-arrow-left fa-1x"></i>       <i class="fa-solid fa-arrow-right fa-1x"></i>                                                                                                                                                                 <i class="fa-brands fa-rocketchat fa-2x"><span style="display: inline-block; font-size: x-small;">live chat</span></i></pre>
+    </div>
+
+    <div class="fotter-page">
+      <!-- sixth page-->
+      <section>
+        <center>
+          <div style="display: inline-block">
+            <h1 style="color: #342e69; font-weight: bolder">Work with us</h1>
+            <div
+              style="
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                margin: 4px 0;
+              "
+            ></div>
+          </div>
+
+          <h2 style="font-weight: 900">
+            Belong to a culture not just a company
+          </h2>
+          <button
+            style="
+              color: white;
+              background-color: crimson;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              height: 30px;
+              width: 200px;
+              border: transparent;
+            "
+          >
+            LET'S CONNECT
+            <span
+              style="
+                border: 2px solid white;
+                border-radius: 35%;
+                font-weight: bold;
+              "
+              >+</span
+            >
+          </button>
+        </center>
+      </section>
+      <div class="fotter-sec">
+        <div
+          class="fott-info"
+          style="
+            justify-content: flex-start;
+            text-align: start;
+            padding-top: 50px;
+          "
+        >
+          <h1>TRIDASA</h1>
+          <span
+            ><span
+              style="text-decoration: underline; text-decoration-color: #e6e6e6"
+              >Quick Links</span
+            ><br />
+            Home<br />
+            About Us<br />
+            Why Tridasa<br />
+            Project<br />
+            Information Hub<br />
+            Contact Us</span
+          >
+        </div>
+        <div
+          class="fott-info"
+          style="
+            justify-content: flex-start;
+            text-align: start;
+            padding-top: 70px;
+          "
+        >
+          <h4>
+            <span
+              style="text-decoration: underline; text-decoration-color: #e6e6e6"
+              >Get</span
+            >
+            in touch with Tridasa
+          </h4>
+          <span
+            >5-9-30/1/4/4/4, 2nd Floor<br />
+            Rd.No: 5, Palace Colony<br />
+            Basheerbagh<br />
+            Hyderabad - 500063<br />
+            Telangana, INDIA</span
+          >
+        </div>
+        <div
+          class="fott-info"
+          style="justify-content: flex-start; text-align: start"
+        >
+          <h4 style="padding-top: 60px">
+            <span
+              style="text-decoration: underline; text-decoration-color: #e6e6e6"
+              >Contact</span
+            >
+          </h4>
+          <span
+            >+91 98765 43210<br />
+            +91 98765 43210<br />
+            info@adroitinfoactive.net</span
+          >
+        </div>
+        <div
+          class="fott-info"
+          style="justify-content: flex-start; text-align: start"
+        >
+          <h4 style="padding-top: 60px">
+            <span
+              style="text-decoration: underline; text-decoration-color: #e6e6e6"
+              >Follow Us</span
+            >
+          </h4>
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-instagram fa-2x"></i>
+          <i class="fa-brands fa-linkedin fa-2x"></i>
+          <i class="fa-brands fa-x-twitter fa-2x"></i>
+        </div>
+      </div>
+    </div>
+    -->
+  </body>
+</html>
